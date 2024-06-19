@@ -19,7 +19,6 @@
   ],
   "scripts": {
     "build": "tsx ./src/index.ts",
-    "change": "changeset version",
     "release": "yarn build && changeset publish"
   },
   "dependencies": {

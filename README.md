@@ -11,7 +11,7 @@ yarn build
 Generate a new changeset:
 
 ```bash
-yarn change
+yarn changeset
 ```
 
 Publish a new package version:
