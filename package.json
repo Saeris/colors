@@ -1,0 +1,65 @@
+{
+  "name": "@saeris/colors",
+  "version": "0.0.0",
+  "author": "Drake Costa <drake@saeris.io> (https://saeris.gg/)",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saeris/colors.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsx ./src/index.ts",
+    "change": "changeset version",
+    "release": "yarn build && changeset publish"
+  },
+  "dependencies": {
+    "colorjs.io": "^0.5.0"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.5",
+    "@saeris/eslint-config": "^2.6.0",
+    "@types/node": "^20.14.5",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
+    "eslint": "8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.3.2",
+    "tsx": "^4.15.6",
+    "typescript": "5.4.5"
+  },
+  "packageManager": "yarn@4.3.0",
+  "eslintConfig": {
+    "extends": [
+      "@saeris/eslint-config/base",
+      "@saeris/eslint-config/typescript",
+      "@saeris/eslint-config/type-aware"
+    ],
+    "ignorePatterns": [
+      "*.js",
+      "*.cjs",
+      "*.mjs",
+      "*.d.ts"
+    ]
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false
+  }
+}
