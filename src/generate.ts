@@ -158,10 +158,11 @@ export const generate = (out: string): Array<[file: string, css: string]> => {
       .toString({ precision: 4 })
       .replace(`none`, `89.88`);
 
-  return Object.entries(colors).reduce((results, [color, modes]) => {
-    const mapLight = mapColors(modes.light);
-    const mapDark = mapColors(modes.dark);
-    const css = `:root {
+  return Object.entries(colors).reduce<Array<[file: string, css: string]>>(
+    (results, [color, modes]) => {
+      const mapLight = mapColors(modes.light);
+      const mapDark = mapColors(modes.dark);
+      const css = `:root {
             ${mapLight((key, value) => toCssVar(color, key, value))}
             
             ${mapLight((key, value) =>
@@ -198,7 +199,9 @@ export const generate = (out: string): Array<[file: string, css: string]> => {
                 )}
             }
         }`;
-    results.push([`${out}/${color}.css`, css]);
-    return results;
-  }, []);
+      results.push([`${out}/${color}.css`, css]);
+      return results;
+    },
+    []
+  );
 };
