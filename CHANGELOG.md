@@ -1,5 +1,11 @@
 # @saeris/colors
 
+## 0.1.1
+
+### Patch Changes
+
+- [`35d1c96`](https://github.com/Saeris/colors/commit/35d1c960cb38244b4f3da96e2311ef12e6a5046a) Thanks [@Saeris](https://github.com/Saeris)! - Update dependencies, Add `exports` field to `package.json`
+
 ## 0.1.0
 
 ### Minor Changes
