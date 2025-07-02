@@ -1,5 +1,11 @@
 # @saeris/colors
 
+## 0.1.2
+
+### Patch Changes
+
+- [`611e24a`](https://github.com/Saeris/colors/commit/611e24ad401b9a1a0d102af9d9e7e57b52f6d5f5) Thanks [@Saeris](https://github.com/Saeris)! - Add missing file extension specifier to "exports" field
+
 ## 0.1.1
 
 ### Patch Changes
